@@ -8,6 +8,7 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "no-console": 1,
         "indent": [
             "error",
             4
@@ -17,7 +18,7 @@ module.exports = {
             "windows"
         ],
         "quotes": [
-            "error",
+            "warn",
             "double"
         ],
         "semi": [
