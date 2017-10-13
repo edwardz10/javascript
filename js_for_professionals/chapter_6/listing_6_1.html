@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Event Handling</title>
+</head>
+<body>
+    <div id="main">
+        <nav id="navbar">
+            <ul>
+                <li>Students
+                    <ul>
+                        <li id="Academics">Academics</li>
+                        <li id="Athletics">Athletics</li>
+                        <li id="Extrcurriculars">Extrcurriculars</li>
+                    </ul>
+                </li>
+                <li>Faculty
+                    <ul>
+                        <li id="Frank Walsh">Frank Walsh</li>
+                        <li id="Diane Walsh">Diane Walsh</li>
+                        <li id="John Mullin">John Mullin</li>
+                        <li id="Lou Gavarenta">Lou Gavarenta</li>
+                        <li id="Dan Tully">Dan Tully</li>
+                        <li id="Emily Su">Emily Su</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="welcome">
+            <h1>Welcome to the School of Javascript</h1>
+            <h3 id="welcome-header">Click here for a welcome message!</h3>
+            <p id="welcome-content">Welcome to the school of Javascript.
+                Here, you will find many
+                <a href="/examples" id="examples-link">examples</a>
+                of Javasscript, taught by our most esteemed
+                <a href="/faculty">faculty</a>.
+                <span id="disclaimer">Please note that these are only examples,
+                    and are not neccesarily
+                <a href="/production-ready">production-ready code</a>.</span></p>
+        </div>
+        <div id="form-container">
+            <h2>Contact Form</h2>
+
+            <p>Thank you for your interest in the school of Javascript.
+            Please fill out the form below so we can send you even 
+            more materials!</p>
+
+            <form id="main-form">
+                <ul>
+                    <li><label for="firstName">First Name:</label>
+                        <input id="firstName" type="text"/></li>
+                    <li><label for="lastName">Last Name:</label>
+                        <input id="lastName" type="text"/></li>
+                    <li><label for="city">City:</label>
+                        <input id="city" type="text"/></li>
+                    <li><label for="state">State:</label>
+                        <input id="state" type="text"/></li>
+                    <li><label for="postCode">Postal Code:</label>
+                        <input id="postCode" type="text"/></li>
+                    <li><label for="comments">Comments:</label>
+                        <textarea name="" id="comments" cols=30 rows=10></textarea></li>
+                    <li><input type="submit"/><input type="reset"/></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <script src="listing_6_3.js"></script>
+    <script src="listing_6_10.js"></script>
+</body>
+</html>
+

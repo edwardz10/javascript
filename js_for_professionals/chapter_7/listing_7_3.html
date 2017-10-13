@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A basic form</title>
+</head>
+<body>
+    <h2>A basic form</h2>
+    <p>Please provide your first and last name</p>
+
+    <form id="nameForm">
+        <div id="fields">
+            <label for="firstName">First Name:</label><br/>
+            <input id="firstName" name="firstName" type="text"
+                class="foo" required/><br/>
+            <label for="lastName">Last Name:</label><br/>
+            <input id="lastName" name="lastName" type="text" required/><br/>
+            <label for="phone">Phone:</label><br/>
+            <input id="phone" type="tel"/><br/>
+            <label for="age">Age (must be over13):</label><br/>
+            <input id="age" type="number" name="age" step="2" min="14" max="100"/><br/>
+            <label for="email">Email:</label><br/>
+            <input id="email" type="email"/><br/>
+            <label for="url">Website:</label><br/>
+            <input id="url" type="url"/><br/>
+        </div>
+
+        <div id="buttons">
+            <input id="overallBtn" value="Check overall validity" type="button"/>
+            <input id="validBtn" value="Display validity" type="button"/>
+            <input id="submitBtn" value="Submit the form" type="submit"/>
+            <input id="resetBtn" value="Reset the form" type="submit"/>
+        </div>
+    </form>
+
+    <div>
+        <h2>Validation results</h2>
+        <div id="vResults"></div>
+        <div id="vDetails"></div>
+    </div>
+
+    <script src="listing_7_3.js"></script>
+</body>
+</html>
