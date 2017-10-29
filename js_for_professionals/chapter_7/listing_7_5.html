@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A basic form</title>
+    <style>
+        input:invalid {
+            background-color: yellow
+        }
+    </style>
+</head>
+<body>
+    <h2>A basic form</h2>
+    <p>Please provide your first and last name</p>
+
+    <form id="nameForm">
+        <fieldset>
+            <label for="firstName">First Name:</label><br/>
+            <input id="firstName" name="firstName" type="text"
+                class="foo" required/><br/>
+            <label for="lastName">Last Name:</label><br/>
+            <input id="lastName" name="lastName" type="text" required/><br/>
+        </fieldset>
+        <div>
+            <input value="Submit the form" type="submit"/>
+            <input value="Reset the form" type="reset"/>
+        </div>
+        <div>
+            <input id="firstNameBtn" value="Check first name validity" type="button"/>
+            <input id="formBtn" value="Check form validity" type="button"/>
+            <input id="preventBtn" value="Prevent default behavior" type="button"/>
+            <input id="restoreBtn" value="Restore default behavior" type="button"/>
+        </div>
+    </form>
+
+    <div id="vResults"></div>
+
+    <script src="listing_7_5.js"></script>
+</body>
+</html>
