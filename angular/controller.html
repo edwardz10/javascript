@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<!doctype html>
+<html data-ng-app="myApp">
+<head>
+	<title></title>
+</head>
+<body>
+    <div data-ng-controller="SimpleController">
+        Name:
+        <br/>
+		    <input type="text" data-ng-model="name"/>
+        <br/>
+
+        <ul>
+            <li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">
+                {{ cust.name }} - {{ cust.city }}</li>
+        </ul>
+    </div>
+
+	<script src="scripts/angular.min.js"></script>
+    <script>
+        function SimpleController($scope) {
+            $scope.customers = [
+                { name: 'John Smith', city: 'Phoenix'},
+                { name: 'John Doe', city: 'New York'},
+                { name: 'Jane Doe', city: 'San Francisco'}
+            ];
+        }
+
+        var myApp = angular.module('myApp', []);
+        myApp.controller('SimpleController', SimpleController);
+=======
 <!DOCTYPE html>
 <html data-ng-app="aaa">
 <head>
@@ -28,6 +60,7 @@
 
         var app = angular.module("aaa", []);
         app.controller("SimpleController", SimpleController);
+>>>>>>> dbf4778b0304e696a995eccd629c992160ac769e
     </script>
 </body>
 </html>
