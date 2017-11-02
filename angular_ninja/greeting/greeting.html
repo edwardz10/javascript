@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Greeting</title>
+</head>
+<body ng-controller="GreetingController">
+    {{greeting}} User! The current date/time is <span>{{now | date:'medium'}}</span>
+    <br/>
+    <button ng-click="getRandomHelloMessage()">Random Hello Message</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
