@@ -1,19 +1,23 @@
 'use strict';
 
+var myAppModule = angular.module('myApp', ['myApp.controllers', 'ui.router']);
 
-// Declare app level module which depends on filters, and services
-var module = angular.module('myApp', [
-  'ngRoute',
-  'myApp.controllers'
-]);
+myAppModule.config(function($stateProvider, $urlRouterProvider){
+    $stateProvider.state('view1', {
+        url: '/view1',
+        controller:'Controller1',
+        templateUrl:'partials/view1.html'
+    }).state('view2', {
+        url: '/view2/:firstname/:lastname',
+        controller:'Controller2',
+        resolve:{
+            names: function(){
+                return ['Misko','Vojta','Brad'];
+            }
+        },
+        templateUrl: 'partials/view2.html'
+    });
 
-module.config(function($routeProvider) {
-    $routeProvider.when('/view1', {
-            controller: 'Controller1',
-            templateUrl: 'partials/view1.html'
-        }).when('/view2/:firstname/:lastname', {
-            controller: 'Controller2',
-            templateUrl: 'partials/view2.html'
-        }).otherwise({redirectTo: '/view1'});
+    $urlRouterProvider.otherwise('/view1');
 });
 

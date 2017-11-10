@@ -2,14 +2,20 @@
 
 /* Controllers */
 
-var module = angular.module('myApp.controllers', []);
+var myAppControllersModule = angular.module('myApp.controllers', []);
 
-module.controller('Controller1', function($scope, $location) {
+myAppControllersModule.controller('Controller1', function($scope, $state) {
     $scope.loadView2 = function() {
-        $location.path('/view2/' + $scope.firstname + '/' + $scope.lastname);
+        $state.go('view2', {
+            firstname: $scope.firstname,
+            lastname: $scope.lastname
+        });
     }
-}).controller('Controller2', function($scope, $routeParams) {
-    $scope.firstname = $routeParams.firstname;
-    $scope.lastname = $routeParams.lastname;
+});
+
+myAppControllersModule.controller('Controller2', function($scope, $stateParams, names) {
+    $scope.firstname = $stateParams.firstname;
+    $scope.lastname = $stateParams.lastname;
+    $scope.names = names;
 });
 
