@@ -1,8 +1,8 @@
 'use strict';
 
-var servicesModule = angular.module('spBlogger.posts.services', []);
+var postsServicesModule = angular.module('spBlogger.posts.services', []);
 
-servicesModule.factory('postService', function() {
+postsServicesModule.factory('postService', function() {
     return {
         posts: [{
             id: 1,

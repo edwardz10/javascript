@@ -2,9 +2,9 @@
 
 /* Controllers */
 
-var controllersModule = angular.module('spBlogger.posts.controllers', []);
+var postsControllersModule = angular.module('spBlogger.posts.controllers', []);
 
-controllersModule.controller('PostController', ['$scope', 'postService', function($scope, postService) {
+postsControllersModule.controller('PostController', ['$scope', 'postService', function($scope, postService) {
     $scope.getAllPosts = function() {
         return postService.getAll();
     }
@@ -12,7 +12,7 @@ controllersModule.controller('PostController', ['$scope', 'postService', functio
     $scope.posts = $scope.getAllPosts();
 }]);
 
-controllersModule.controller('PostDetailsController', 
+postsControllersModule.controller('PostDetailsController', 
     ['$stateParams', '$state', '$scope', 'postService', function($stateParams, $state, $scope, postService) {
         
     $scope.getPostById = function(id) {

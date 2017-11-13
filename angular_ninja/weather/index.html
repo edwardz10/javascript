@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+    <title>$http example</title>
+</head>
+<body ng-controller="WeatherController">
+    City:
+    <input type="text" ng-model="city" placeholder="Enter city name here"><br/>
+    Country:
+    <input type="text" ng-model="country" placeholder="Enter country name here"><br/>
+    <button ng-click="getWeather()">Get Weather</button>
+    <br/>
+    <br/>
+    <b>Weather condition:</b><span>{{weatherDescription}}</span>
+
+    <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

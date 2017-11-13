@@ -1,8 +1,8 @@
 'use strict';
 
-var spBloggerPostsModule = angular.module('spBlogger.posts', ['ui.router']);
+var postsModule = angular.module('spBlogger.posts', ['ui.router']);
 
-spBloggerPostsModule.config(function($stateProvider, $urlRouterProvider) {
+postsModule.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('allPosts', {
         url: '/posts',
         templateUrl: 'modules/posts/views/posts.html',
